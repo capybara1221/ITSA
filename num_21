@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <ctype.h>
+
+// 21
+// 基礎題目36： 平、閏年判定
+int main(void)
+{
+    int y;
+    while(scanf("%d",&y) != EOF)
+    {
+        if(y%400 == 0)
+        {
+            printf("Bissextile Year\n");
+        }
+        else if(y%100 == 0)
+        {
+            printf("Common Year\n");
+        }
+        else if(y%4 == 0)
+        {
+            printf("Bissextile Year\n");
+        }
+        else
+        {
+            printf("Common Year\n");
+        }
+    }
+}
