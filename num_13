@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <ctype.h>
+
+// 13
+// 基礎題目9： 計算正整數被3整除之數值之總和
+int main(void)
+{
+    int n;
+    while(scanf("%d",&n) != EOF)
+    {
+        int tmp=0,ans=0;
+        while(tmp<n)
+        {
+            //printf("%d\n",tmp);
+            tmp+=3;
+            if(tmp<=n)
+                ans+=tmp;
+        }
+        printf("%d\n",ans);
+    }
+}
