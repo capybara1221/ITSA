@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <ctype.h>
+
+// 27
+// C_AR023: 字根與子字串
+int main(void)
+{
+    char in1[101],in2[101];
+    scanf("%s",in1);
+    scanf("%s",in2);
+    
+    if(strstr(in2,in1)!=NULL)
+    {
+        printf("YES\n");
+    }
+    else
+        printf("NO\n");
+}
