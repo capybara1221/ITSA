@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <ctype.h>
+
+// 25
+// C_AR20: 檢查數值是否有重複
+int main(void)
+{
+    int n;
+    scanf("%d",&n);
+    
+    int in[n],arr[n+1],ans=0;
+    memset(arr,0,sizeof(int)*(n+1));
+    
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&in[i]);
+        arr[in[i]]++;
+        //printf("%d\n",arr[in[i]]);
+        if(arr[in[i]]>1 && ans==0)
+        {
+            printf("0\n");
+            ans++;
+        }
+    }
+    
+    if(ans==0)
+        printf("1\n");
+}
