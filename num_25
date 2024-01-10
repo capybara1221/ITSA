@@ -17,7 +17,7 @@ int main(void)
     {
         scanf("%d",&in[i]);
         arr[in[i]]++;
-        //printf("%d\n",arr[in[i]]);
+       
         if(arr[in[i]]>1 && ans==0)
         {
             printf("0\n");
