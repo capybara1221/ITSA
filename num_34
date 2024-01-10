@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <ctype.h>
+
+// 34
+// C_AR145: What is the Median?
+int main(void)
+{
+    float in[10];
+    for(int i=0;i<10;i++)
+        scanf("%f",&in[i]);
+    
+    for(int i=0;i<9;i++)
+    {
+        for(int j=0;j<9-i;j++)
+        {
+            if(in[j]>in[j+1])
+            {
+                int tmp=in[j];
+                in[j]=in[j+1];
+                in[j+1]=tmp;
+            }
+        }
+    }
+    
+    for(int i=0;i<10;i++)
+    {
+        printf("%.0f",in[i]);
+        if(i<9)
+            printf(" ");
+        else
+            printf("\n");
+    }
+    printf("Median:%.2f\n",(in[4]+in[5])/2);
+}
