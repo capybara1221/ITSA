@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <ctype.h>
+
+// 23
+// 基礎題目39： 考試測驗
+int main(void)
+{
+    int n;
+    scanf("%d",&n);
+    
+    for(int i=0;i<n;i++)
+    {
+        int in1,in2,in3;
+        scanf("%d %d %d",&in1,&in2,&in3);
+        
+        int grade[3]={in1,in2,in3};
+        for(int i=0;i<2;i++)
+        {
+            for(int j=0;j<2-i;j++)
+            {
+                if(grade[j]>grade[j+1])
+                {
+                    int tmp=grade[j];
+                    grade[j]=grade[j+1];
+                    grade[j+1]=tmp;
+                }
+            }
+        }
+        
+        if(grade[0]>=60)
+        {
+            printf("P\n");
+        }
+        else if((grade[0]<60 && grade[1]>=60) && (grade[0]+grade[1]+grade[2]>=220))
+        {
+            printf("P\n");
+        }
+        else if((grade[0]<60 && grade[1]>=60) && (grade[0]+grade[1]+grade[2]<220))
+        {
+            printf("M\n");
+        }
+        else if((grade[0]<60 && grade[1]<60 && grade[2]>=60) && grade[2]>=80)
+        {
+            printf("M\n");
+        }
+        else
+            printf("F\n");
+    }
+}
