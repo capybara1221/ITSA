@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <ctype.h>
+
+// 33
+// C_AR72: 電影票購買計算
+int main(void)
+{
+    int n=0;
+    scanf("%d",&n);
+    for(int i=0;i<n;i++)
+    {
+        int f,h;
+        scanf("%d %d",&f,&h);
+        printf("%d\n",f*250+h*175);
+    }
+}
