@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <ctype.h>
+
+// 19
+// 基礎題目30： 星座查詢
+int main(void)
+{
+    char s[12][12]={"Aquarius","Pisces","Aries","Taurus","Gemini","Cancer","Leo","Virgo","Libra","Scorpio","Sagittarius","Capricorn"};
+    int m[13][3]={{0,0,0},{21,11,0},{19,0,1},{21,1,2},{21,2,3},{22,3,4},{22,4,5},{23,5,6},{24,6,7},{24,7,8},{24,8,9},{23,9,10},{22,10,11}};
+    int month,date;
+    scanf("%d %d",&month,&date);
+    if(date<m[month][0])
+    {
+        printf("%s\n",s[m[month][1]]);
+    }
+    else
+        printf("%s\n",s[m[month][2]]);
+    
+}
