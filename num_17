@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <ctype.h>
+
+// 17
+// C_AR44: 迴文問題
+int main(void)
+{
+    char in[100];
+    
+    while(scanf("%s",in) != EOF)
+    {
+        unsigned long len=strlen(in);
+        char rev[len+1];
+        int ans=0;
+        for(int i=0;i<len;i++)
+        {
+            rev[i]=in[len-i-1];
+        }
+        
+        for(int i=0;i<len;i++)
+        {
+            if(rev[i]!=in[i])
+            {
+                ans++;
+                break;
+            }
+        }
+        if(ans==0)
+            printf("YES\n");
+        else
+            printf("NO\n");
+        
+    }
+}
