@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <ctype.h>
+
+// 11
+// 基礎題目6： 季節判定
+int main(void)
+{
+    int in;
+    while(scanf("%d",&in)!=EOF)
+    {
+        if(in>=3 && in<=5)
+            printf("Spring\n");
+        if(in>=6 && in<=8)
+            printf("Summer\n");
+        if(in>=9 && in<=11)
+            printf("Autumn\n");
+        if(in==12 || in==1 || in==2)
+            printf("Winter\n");
+    }
+}
