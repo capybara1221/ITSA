@@ -1,4 +1,7 @@
-
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <ctype.h>
 
 // 8
 // C_AR63: 矩陣相加
