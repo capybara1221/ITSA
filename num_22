@@ -1,0 +1,75 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <ctype.h>
+
+// 22
+// 基礎題目38： 計算電費
+int main(void)
+{
+    int in;
+    float sum=0,sum2=0;
+    scanf("%d",&in);
+    float in2=in;
+    
+    if(in>=701)
+    {
+        int tmp=in-700;
+        sum+=tmp*5.63;
+        in=700;
+    }
+    if(in>=501 && in<701)
+    {
+        int tmp1=in-500;
+        sum+=tmp1*4.97;
+        in=500;
+    }
+    if(in>=331 && in<501)
+    {
+        int tmp2=in-330;
+        sum+=tmp2*4.39;
+        in=330;
+    }
+    if(in>=121 && in<331)
+    {
+        int tmp3=in-120;
+        sum+=tmp3*3.02;
+        in=120;
+    }
+    if(in<121)
+    {
+        sum+=in*2.10;
+    }
+    
+    if(in2>=701)
+    {
+        int tmp=in2-700;
+        sum2+=tmp*4.50;
+        in2=700;
+    }
+    if(in2>=501 && in2<701)
+    {
+        int tmp1=in2-500;
+        sum2+=tmp1*4.01;
+        in2=500;
+    }
+    if(in2>=331 && in2<501)
+    {
+        int tmp2=in2-330;
+        sum2+=tmp2*3.61;
+        in2=330;
+    }
+    if(in2>=121 && in2<331)
+    {
+        int tmp3=in2-120;
+        sum2+=tmp3*2.68;
+        in2=120;
+    }
+    if(in2<121)
+    {
+        sum2+=in2*2.10;
+    }
+    
+    printf("Summer months:%.2f\n",sum);
+    printf("Non-Summer months:%.2f\n",sum2);
+}
