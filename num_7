@@ -34,7 +34,6 @@ int main(void)
     }
     
     int out[r1][c2];
-    //memset(out,0,sizeof(int)*r1*r2);
     
     for(int i=0;i<r1;i++)
     {
