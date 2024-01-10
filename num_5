@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <ctype.h>
+
+// 5
+// C_AR53: 學生成績排序
+int main(void)
+{
+    int n;
+    scanf("%d",&n);
+    
+    int grade[n];
+    for(int i=0;i<n;i++)
+        scanf("%d",&grade[i]);
+    
+    bubble_sort(grade,n);
+    
+    for(int i=0;i<n;i++)
+    {
+        printf("%d\n",grade[i]);
+    }
+}
