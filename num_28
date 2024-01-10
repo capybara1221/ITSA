@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <ctype.h>
+
+// 28
+// C_AR021: 成績統計
+int main(void)
+{
+    int n;
+    scanf("%d",&n);
+    
+    float grade[n][3];
+    float total=0,totalC=0,totalE=0,totalM=0;
+    for(int i=0;i<n;i++)
+    {
+        scanf("%f %f %f",&grade[i][0],&grade[i][1],&grade[i][2]);
+        total+=(grade[i][0]+grade[i][1]+grade[i][2]);
+        totalC+=grade[i][0];
+        totalE+=grade[i][1];
+        totalM+=grade[i][2];
+    }
+    
+    printf("%.1f %.1f %.1f %.1f\n",total/(n*3),totalC/n,totalE/n,totalM/n);
+}
