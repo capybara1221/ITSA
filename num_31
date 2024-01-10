@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <ctype.h>
+
+// 31
+// C_AR77: 二維陣列反轉
+int main(void)
+{
+    int row,col;
+    scanf("%d",&row);
+    scanf("%d",&col);
+    
+    int m[row][col],c=row*col;
+    for(int i=0;i<row;i++)
+    {
+        for(int j=0;j<col;j++)
+        {
+            printf("%d",c);
+            c--;
+            if(j<col-1)
+                printf(" ");
+            else
+                printf("\n");
+        }
+    }
+}
